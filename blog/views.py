@@ -39,5 +39,5 @@ def post_edit(request,post_id):
 
 def post_delete(request,post_id):
     post = get_object_or_404(Person, pk=post_id)
-    post.delete()
+    person.delete()
     return redirect('home')
