@@ -1,0 +1,15 @@
+<head>
+    <title>디테일 페이지</title>
+</head>
+
+<body>
+    <h1>안녕 나는 디테일</h1>
+    <div>
+        <h2>{{person.name}}</h2>
+        <p>{{person.created_date}}</p>
+        <p>{{person.age}}</p>
+        <a href = "{% url 'home' %}">홈으로 가기</a>
+        <a href = "{% url 'edit' person.id %}">수정으로 가기</a>
+        <a href = "{% url 'delete' person.id %}">삭제로 가기</a>
+    </div>
+</body>

@@ -1,0 +1,16 @@
+<head>
+    <title>홈 페이지</title>
+</head>
+
+<body>
+    <h1> 나는 홈이야 !!</h1>
+    <a href = "{% url 'new'%}">누르면 새 글 써짐</a>
+    {% for person in persons.all %}
+        <div>
+            <h2><a href = "{% url 'detail' person.id %}">{{person.name}}</a></h2>
+            <p>{{person.created_date}}</p>
+            <p>{{person.major}}</p>
+        </div>
+    {% endfor %}
+</body>
+ 
